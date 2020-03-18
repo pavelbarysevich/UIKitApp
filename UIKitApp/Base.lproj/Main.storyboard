@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,166 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIKitApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZW-5h-WFT">
+                                <rect key="frame" x="0.0" y="20" width="414" height="876"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="75u-wi-AYH">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJF-ve-zNv">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                                                <subviews>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vte-Bn-PxA">
+                                                        <rect key="frame" x="25" y="45" width="364" height="32"/>
+                                                        <segments>
+                                                            <segment title="First"/>
+                                                            <segment title="Second"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="actionSegmentControl" destination="BYZ-38-t0r" eventType="valueChanged" id="BTt-r3-dZZ"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="siH-6c-Pey">
+                                                        <rect key="frame" x="23" y="261.5" width="368" height="31"/>
+                                                        <connections>
+                                                            <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="Y6l-oZ-L1B"/>
+                                                        </connections>
+                                                    </slider>
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Your Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PJ9-EV-exu">
+                                                        <rect key="frame" x="25" y="386.5" width="364" height="34"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNo-rm-kad">
+                                                        <rect key="frame" x="25" y="186" width="364" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byu-eh-loo">
+                                                        <rect key="frame" x="25" y="450.5" width="364" height="34"/>
+                                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Done">
+                                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="actionButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="CVh-Gv-eiT"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="600" id="8iQ-su-GP0"/>
+                                                    <constraint firstItem="Byu-eh-loo" firstAttribute="leading" secondItem="LJF-ve-zNv" secondAttribute="leading" constant="25" id="Af1-Mr-4Xf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PJ9-EV-exu" secondAttribute="trailing" constant="25" id="Cik-wd-JR7"/>
+                                                    <constraint firstItem="PJ9-EV-exu" firstAttribute="top" secondItem="siH-6c-Pey" secondAttribute="bottom" constant="95" id="HXe-Fo-nk4"/>
+                                                    <constraint firstItem="Vte-Bn-PxA" firstAttribute="leading" secondItem="LJF-ve-zNv" secondAttribute="leading" constant="25" id="TOf-ic-cIc"/>
+                                                    <constraint firstItem="siH-6c-Pey" firstAttribute="leading" secondItem="LJF-ve-zNv" secondAttribute="leading" constant="25" id="Taj-sc-hSc"/>
+                                                    <constraint firstItem="PJ9-EV-exu" firstAttribute="leading" secondItem="LJF-ve-zNv" secondAttribute="leading" constant="25" id="Vme-yX-LAu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="uNo-rm-kad" secondAttribute="trailing" constant="25" id="XeW-26-UT2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Byu-eh-loo" secondAttribute="trailing" constant="25" id="bFM-UA-Xgf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="siH-6c-Pey" secondAttribute="trailing" constant="25" id="bgF-ck-PcY"/>
+                                                    <constraint firstItem="Vte-Bn-PxA" firstAttribute="top" secondItem="LJF-ve-zNv" secondAttribute="top" constant="45" id="fc4-Mq-CV2"/>
+                                                    <constraint firstItem="uNo-rm-kad" firstAttribute="top" secondItem="Vte-Bn-PxA" secondAttribute="bottom" constant="110" id="jIE-oh-yDq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Vte-Bn-PxA" secondAttribute="trailing" constant="25" id="jnL-2b-OL4"/>
+                                                    <constraint firstItem="Byu-eh-loo" firstAttribute="top" secondItem="PJ9-EV-exu" secondAttribute="bottom" constant="30" id="keY-TL-0e0"/>
+                                                    <constraint firstItem="siH-6c-Pey" firstAttribute="top" secondItem="uNo-rm-kad" secondAttribute="bottom" constant="55" id="uPf-9t-EIX"/>
+                                                    <constraint firstItem="uNo-rm-kad" firstAttribute="leading" secondItem="LJF-ve-zNv" secondAttribute="leading" constant="25" id="vOa-RY-vgX"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="pmQ-3J-PDf" appends="YES" id="f4S-KK-XQI"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqW-md-XIb" userLabel="View2">
+                                                <rect key="frame" x="0.0" y="600" width="414" height="600"/>
+                                                <subviews>
+                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="7v4-TA-wr5">
+                                                        <rect key="frame" x="20" y="35" width="374" height="216"/>
+                                                        <connections>
+                                                            <action selector="actionDataPicer" destination="BYZ-38-t0r" eventType="valueChanged" id="rYr-7m-foc"/>
+                                                        </connections>
+                                                    </datePicker>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC5-SJ-Kob">
+                                                        <rect key="frame" x="25" y="346" width="364" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0LM-EH-rb2">
+                                                        <rect key="frame" x="25" y="391.5" width="366" height="31"/>
+                                                        <connections>
+                                                            <action selector="actionSwitch" destination="BYZ-38-t0r" eventType="valueChanged" id="ZLL-UO-7xW"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstItem="YC5-SJ-Kob" firstAttribute="leading" secondItem="eqW-md-XIb" secondAttribute="leading" constant="25" id="0ux-3y-ioE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0LM-EH-rb2" secondAttribute="trailing" constant="25" id="7P0-Yv-aHS"/>
+                                                    <constraint firstItem="0LM-EH-rb2" firstAttribute="top" secondItem="YC5-SJ-Kob" secondAttribute="bottom" constant="25" id="BWG-tn-Oqu"/>
+                                                    <constraint firstItem="0LM-EH-rb2" firstAttribute="leading" secondItem="eqW-md-XIb" secondAttribute="leading" constant="25" id="JR5-b5-jc9"/>
+                                                    <constraint firstItem="7v4-TA-wr5" firstAttribute="top" secondItem="eqW-md-XIb" secondAttribute="top" constant="35" id="OFJ-PJ-8ai"/>
+                                                    <constraint firstAttribute="trailing" secondItem="YC5-SJ-Kob" secondAttribute="trailing" constant="25" id="XGi-h1-ZtR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7v4-TA-wr5" secondAttribute="trailing" constant="20" symbolic="YES" id="bsA-kT-ETG"/>
+                                                    <constraint firstItem="YC5-SJ-Kob" firstAttribute="top" secondItem="7v4-TA-wr5" secondAttribute="bottom" constant="95" id="dmb-Hy-OZZ"/>
+                                                    <constraint firstItem="7v4-TA-wr5" firstAttribute="leading" secondItem="eqW-md-XIb" secondAttribute="leading" constant="20" symbolic="YES" id="mlH-Wh-rcw"/>
+                                                    <constraint firstAttribute="height" constant="600" id="svA-oT-gba"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="pmQ-3J-PDf" appends="YES" id="gLi-sf-vFy"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="75u-wi-AYH" firstAttribute="trailing" secondItem="5ad-OE-hzp" secondAttribute="trailing" id="4KD-8l-C6C"/>
+                                    <constraint firstItem="75u-wi-AYH" firstAttribute="bottom" secondItem="5ad-OE-hzp" secondAttribute="bottom" id="Z9u-ea-F4u"/>
+                                    <constraint firstItem="75u-wi-AYH" firstAttribute="width" secondItem="6iL-uN-d8h" secondAttribute="width" id="fLh-dj-pc9"/>
+                                    <constraint firstItem="75u-wi-AYH" firstAttribute="leading" secondItem="5ad-OE-hzp" secondAttribute="leading" id="lV6-3e-hRO"/>
+                                    <constraint firstItem="75u-wi-AYH" firstAttribute="top" secondItem="5ad-OE-hzp" secondAttribute="top" id="qft-vF-8BC"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="5ad-OE-hzp"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="6iL-uN-d8h"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cZW-5h-WFT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ECn-vz-4bp"/>
+                            <constraint firstAttribute="bottom" secondItem="cZW-5h-WFT" secondAttribute="bottom" id="aSM-Js-Je7"/>
+                            <constraint firstItem="cZW-5h-WFT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pfG-cg-wpL"/>
+                            <constraint firstItem="cZW-5h-WFT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="qhI-PB-5cX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="LabeSwitch" destination="YC5-SJ-Kob" id="QuJ-2d-wUy"/>
+                        <outlet property="button" destination="Byu-eh-loo" id="tSJ-Oq-5t2"/>
+                        <outlet property="dataPicer" destination="7v4-TA-wr5" id="QV6-SO-0TN"/>
+                        <outlet property="mainLabel" destination="uNo-rm-kad" id="eZa-wN-WJr"/>
+                        <outlet property="offOnSwitch" destination="0LM-EH-rb2" id="Xf5-5e-1Uc"/>
+                        <outlet property="segmentedControl" destination="Vte-Bn-PxA" id="EgC-9S-YZf"/>
+                        <outlet property="slider" destination="siH-6c-Pey" id="eaT-tt-ERC"/>
+                        <outlet property="textField" destination="PJ9-EV-exu" id="PTJ-by-DUd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pmQ-3J-PDf">
+                    <connections>
+                        <action selector="Tap:" destination="BYZ-38-t0r" id="voA-ww-oZW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-47.826086956521742" y="94.419642857142847"/>
         </scene>
     </scenes>
 </document>
